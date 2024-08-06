@@ -1,0 +1,173 @@
+/*===========================
+Table of contents
+=============================
+1. main (container)
+2. Left Section
+3. right section
+*/
+
+
+
+/*===========================
+1. main (container)
+=============================*/
+
+main.flex{
+    gap: 2.64rem;
+    align-items: start;
+
+}
+
+/*===========================
+ End main (container)
+=============================*/
+
+
+/*===========================
+2. left (Sction)
+=============================*/
+
+main section.left-section{
+    flex-direction: column;
+    gap: 10px;
+}
+
+main section.left-section button{
+    background-color: rgba(36,37,46,1);
+    width: 11rem;
+    padding: 0.75rem 0;
+    text-align: center;
+    font-size: 1.05 rem;
+    border-radius: 5px;
+    text-transform: capitalize;
+    opacity: 0.5;
+}
+main section.left-section button.active{
+    opacity: 1;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    padding: 0.8rem 0;
+    border: 1px solid var(--light-blue);
+}
+
+main section.left-section button:hover{
+    opacity: 1;
+    transition: 0.3s ease;
+}
+
+/*===========================
+ End left (Sction)
+=============================*/
+
+
+
+
+/*===========================
+3. Right Section
+=============================*/
+
+main section.right-section.flex{
+    flex-grow: 1;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 2rem;
+    justify-content: flex-start;
+
+}
+
+/*===========================
+3.1 Right Section card
+=============================*/
+.card{
+    border: 1px solid rgba(93,188   ,252,0.3);
+    border-radius: 5px;
+    background-image: linear-gradient(rgba(255,255,255,0.05),rgba(255,255,255,0.05));
+}
+.card:hover{
+    border: 1px solid var(--light-blue);
+    transition: 0.3s ease;
+    scale: 1.01;
+    rotate: 1deg;
+    cursor: pointer;
+}
+
+.card img{
+    border-radius: inherit;
+}
+
+
+/*===========================
+3.1 Right Section card
+=============================*/
+
+.card .box{
+    padding: 1rem 0.4rem;
+    
+}
+
+.card .box .title{
+    color: var(--title);
+    
+}
+
+.card .box .sub-title{
+    color: var(--subtitle);
+    font-size: 0.8rem;
+    margin-top: 0.7rem;
+    margin-bottom: 1.1rem;
+    line-height: 1.4;
+    letter-spacing: 0.3px;
+}
+
+.card .box .icons{
+    justify-content: space-between;
+}
+
+.card .icon-link, .icon-github{
+    font-size: 1.2rem;
+    color: var(--subtitle);
+}
+
+
+.card .icon-link:hover, .icon-github:hover{
+    font-size: 1.25 rem;
+    color: var(--subtitle);
+    color: var(--icon-hover);
+    cursor: pointer;
+}
+
+.card a.link{
+    font-size:0.9rem;
+    color: var(--light-blue);
+    letter-spacing: 0.1rem;
+    margin-right: 12px;
+}
+
+/*===========================
+   Right Section
+=============================*/
+
+
+
+
+@media (max-width: 600px)
+{
+    main.flex{
+        gap: 2.64rem;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    main section.left-section{
+        flex-direction: row;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    main section.left-section button{
+        width: 7rem;
+        padding: 0.8rem 0;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+}
